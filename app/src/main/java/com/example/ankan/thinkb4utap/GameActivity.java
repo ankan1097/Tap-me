@@ -30,7 +30,7 @@ public class GameActivity extends AppCompatActivity {
 
         mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
         mProgressBar.setProgress(i);
-        mCountDownTimer = new MyCountDownTimer(5000, 40);
+        mCountDownTimer = new MyCountDownTimer(50000, 40);
 
         mCountDownTimer.start();
         ans = (int) (Math.random() * 4);

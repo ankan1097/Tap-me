@@ -15,18 +15,24 @@ public class GameOverActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
-        tv=(TextView)findViewById(R.id.gameovertext);
+        tv = (TextView) findViewById(R.id.gameovertext);
         tv.setText("game over loser");
-        gob=(Button)findViewById(R.id.playagain);
+        gob = (Button) findViewById(R.id.playagain);
 
-        gob.setOnClickListener(new View.OnClickListener(){
+        gob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),GameActivity.class);
+                Intent intent = new Intent(getApplicationContext(), GameActivity.class);
                 startActivity(intent);
             }
 
         });
 
+    }
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        startActivity(intent);
     }
 }
