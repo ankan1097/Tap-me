@@ -23,12 +23,16 @@ public class GameActivity extends AppCompatActivity {
 
         mProgressBar=(ProgressBar)findViewById(R.id.progressbar);
         mProgressBar.setProgress(i);
-        mCountDownTimer=new CountDownTimer(2000+500,20) {
+        mCountDownTimer=new CountDownTimer(20000,40) {
 
             @Override
             public void onTick(long millisUntilFinished) {
-                Log.v("Log_tag", "Tick of Progress"+ i+ millisUntilFinished);
-                i++;
+                Log.v("Log_tag", "Tick of Progress"+ i+"   "+millisUntilFinished);
+                i+=2;
+                if(i==100) {
+                    i = 0;
+                    getquestion((int)(Math.random()*4));
+                }
                 mProgressBar.setProgress(i);
 
             }
@@ -36,10 +40,9 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 //Do what you want
-                i++;
+                i+=2;
                 mProgressBar.setProgress(i);
-                if(i==100)
-                    i=0;
+
             }
 
         };
@@ -49,9 +52,9 @@ public class GameActivity extends AppCompatActivity {
 
     public void getquestion(int Qch) {
         String[] Q0 = {"wait", "just wait", "do nothing", "It wont be long"};
-        String[] Q1 = {"tap 1", "just tap 1", "donot tap 2 tap 1", "don't tap 3 tap 1"};
-        String[] Q2 = {"tap 2", "just tap 2", "donot tap 1 tap 2", "don't tap 3 tap 2"};
-        String[] Q3 = {"tap 3", "just tap 3", "donot tap 1 tap 3", "don't tap 2 tap 3"};
+        String[] Q1 = {"tap 1", "just tap 1", "do not tap 2 tap 1", "don't tap 3 tap 1"};
+        String[] Q2 = {"tap 2", "just tap 2", "do not tap 1 tap 2", "don't tap 3 tap 2"};
+        String[] Q3 = {"tap 3", "just tap 3", "do not tap 1 tap 3", "don't tap 2 tap 3"};
 
         int ch;
         String qesn;
