@@ -4,6 +4,8 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -12,18 +14,22 @@ public class GameActivity extends AppCompatActivity {
 
     ProgressBar mProgressBar;
     CountDownTimer mCountDownTimer;
-    int i=0;
+    int i=0,ans;
     TextView qtext;
+    Button bt1,bt2,bt3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         qtext=(TextView)findViewById(R.id.questiontext);
+        bt1=(Button)findViewById(R.id.button1);
+        bt2=(Button)findViewById(R.id.button2);
+        bt3=(Button)findViewById(R.id.button3);
 
         mProgressBar=(ProgressBar)findViewById(R.id.progressbar);
         mProgressBar.setProgress(i);
-        mCountDownTimer=new CountDownTimer(20000,40) {
+        mCountDownTimer=new CountDownTimer(5000,40){
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -31,7 +37,9 @@ public class GameActivity extends AppCompatActivity {
                 i+=2;
                 if(i==100) {
                     i = 0;
-                    getquestion((int)(Math.random()*4));
+                    millisUntilFinished=5000;
+//                    getquestion((int)(Math.random()*4));
+                    setButtntext();
                 }
                 mProgressBar.setProgress(i);
 
@@ -47,7 +55,52 @@ public class GameActivity extends AppCompatActivity {
 
         };
         mCountDownTimer.start();
-        getquestion((int)(Math.random()*4));
+        ans=(int)(Math.random()*4);
+        getquestion(ans);
+        setButtntext();
+
+        bt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Integer.parseInt(bt1.getText().toString()) == ans) {
+
+                } else {
+
+                }
+            }
+        });
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( Integer.parseInt(bt2.getText().toString()) == ans ){
+
+                }
+                else {
+
+                }
+            }
+        });
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( Integer.parseInt(bt3.getText().toString()) == ans ){
+
+                }
+                else {
+
+                }
+            }
+        });
+    }
+
+    public void setButtntext(){
+        String[] t={"1","2","3"};
+        int s=(int)(Math.random()*3);//0 1 2
+        int o= ( (int)(Math.random()*2) )*2 - 1;//-1 1
+//        System.out.println(s+"  "+o);
+        bt1.setText(t[s]);
+        bt2.setText(t[(3+s+o)%3]);
+        bt3.setText(t[(3+s+o+o)%3]);
     }
 
     public void getquestion(int Qch) {
