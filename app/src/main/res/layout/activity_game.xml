@@ -14,14 +14,17 @@
         android:id="@+id/progressbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@android:style/Widget.ProgressBar.Horizontal"/>
+        android:max="100"
+        android:progress="100"
+        style="?android:attr/progressBarStyleHorizontal" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/progressbar"
         android:id="@+id/questiontext"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
