@@ -26,6 +26,13 @@ public class MenuActivity extends AppCompatActivity {
 
             }
         });
+        butt3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CreditsActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
 
