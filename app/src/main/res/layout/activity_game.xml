@@ -40,4 +40,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/button2"
         android:id="@+id/button3"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button3"
+        android:text="Score:"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/scr"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scr"
+        android:layout_centerInParent="true"
+        android:textSize="17dp"
+        android:id="@+id/score"/>
 </RelativeLayout>

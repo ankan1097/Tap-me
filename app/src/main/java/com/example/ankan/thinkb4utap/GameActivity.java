@@ -18,6 +18,8 @@ public class GameActivity extends AppCompatActivity {
     int i = 0, ans;
     TextView qtext;
     Button bt1, bt2, bt3;
+    int score = 0;
+    TextView scr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +29,13 @@ public class GameActivity extends AppCompatActivity {
         bt1 = (Button) findViewById(R.id.button1);
         bt2 = (Button) findViewById(R.id.button2);
         bt3 = (Button) findViewById(R.id.button3);
+        score=0;
+        scr = (TextView) findViewById(R.id.score);
+        scr.setText(""+score);
 
         mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
         mProgressBar.setProgress(i);
-        mCountDownTimer = new MyCountDownTimer(50000, 40);
+        mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
 
         mCountDownTimer.start();
         ans = (int) (Math.random() * 4);
@@ -44,8 +49,16 @@ public class GameActivity extends AppCompatActivity {
                     ans=(int)(Math.random()*4);
                     getquestion(ans);
                     setButtntext();
+                    score++;
+                    scr.setText(""+score);
+                    i=0;
+                    mCountDownTimer.cancel();
+                    mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
+                    mCountDownTimer.start();
                 } else {
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
+                    mCountDownTimer.cancel();
+                    mCountDownTimer = null;
                     startActivity(intent);
                 }
             }
@@ -58,8 +71,16 @@ public class GameActivity extends AppCompatActivity {
                     ans = (int) (Math.random() * 4);
                     getquestion(ans);
                     setButtntext();
+                    score++;
+                    scr.setText(""+score);
+                    i=0;
+                    mCountDownTimer.cancel();
+                    mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
+                    mCountDownTimer.start();
                 } else {
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    mCountDownTimer.cancel();
+                    mCountDownTimer = null;
                     startActivity(intent);
                 }
             }
@@ -72,9 +93,17 @@ public class GameActivity extends AppCompatActivity {
                     ans=(int)(Math.random()*4);
                     getquestion(ans);
                     setButtntext();
+                    score++;
+                    scr.setText(""+score);
+                    i=0;
+                    mCountDownTimer.cancel();
+                    mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
+                    mCountDownTimer.start();
                 }
                 else {
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
+                    mCountDownTimer.cancel();
+                    mCountDownTimer = null;
                     startActivity(intent);
                 }
             }
@@ -130,12 +159,19 @@ public class GameActivity extends AppCompatActivity {
                 i = 0;
                 if(ans!=0){
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
+                    mCountDownTimer.cancel();
+                    mCountDownTimer = null;
                     startActivity(intent);
                 }
                 else {
                     ans=(int)(Math.random()*4);
                     getquestion(ans);
                     setButtntext();
+                    score++;
+                    scr.setText(""+score);
+                    mCountDownTimer.cancel();
+                    mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
+                    mCountDownTimer.start();
                 }
             }
             mProgressBar.setProgress(i);
