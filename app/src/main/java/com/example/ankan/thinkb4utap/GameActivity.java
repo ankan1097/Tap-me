@@ -1,5 +1,6 @@
 package com.example.ankan.thinkb4utap;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ public class GameActivity extends AppCompatActivity {
 
         mProgressBar=(ProgressBar)findViewById(R.id.progressbar);
         mProgressBar.setProgress(i);
-        mCountDownTimer=new CountDownTimer(5000,40){
+        mCountDownTimer=new CountDownTimer(15000,40){
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -37,9 +38,19 @@ public class GameActivity extends AppCompatActivity {
                 i+=2;
                 if(i==100) {
                     i = 0;
-                    millisUntilFinished=5000;
+                    if(ans!=0){
+                        Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        ans=(int)(Math.random()*4);
+                        getquestion(ans);
+                        setButtntext();
+                    }
+
+
 //                    getquestion((int)(Math.random()*4));
-                    setButtntext();
+//                    setButtntext();
                 }
                 mProgressBar.setProgress(i);
 
@@ -63,20 +74,25 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (Integer.parseInt(bt1.getText().toString()) == ans) {
-
+                    ans=(int)(Math.random()*4);
+                    getquestion(ans);
+                    setButtntext();
                 } else {
-
+                    Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
+                    startActivity(intent);
                 }
             }
         });
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if ( Integer.parseInt(bt2.getText().toString()) == ans ){
-
-                }
-                else {
-
+                if (Integer.parseInt(bt2.getText().toString()) == ans) {
+                    ans = (int) (Math.random() * 4);
+                    getquestion(ans);
+                    setButtntext();
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    startActivity(intent);
                 }
             }
         });
@@ -84,10 +100,13 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if ( Integer.parseInt(bt3.getText().toString()) == ans ){
-
+                    ans=(int)(Math.random()*4);
+                    getquestion(ans);
+                    setButtntext();
                 }
                 else {
-
+                    Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
+                    startActivity(intent);
                 }
             }
         });
