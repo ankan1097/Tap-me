@@ -97,13 +97,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[0].getText().toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),tv[0].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[0].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -118,13 +119,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[1].getText().toString(),Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(),tv[1].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[1].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -139,13 +141,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[2].getText().toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),tv[2].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[2].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -160,13 +163,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[3].getText().toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),tv[3].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[3].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -181,13 +185,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[4].getText().toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),tv[4].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[4].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -202,13 +207,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[5].getText().toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),tv[5].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[5].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -223,13 +229,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[6].getText().toString(),Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(),tv[6].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[6].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -244,13 +251,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[7].getText().toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),tv[7].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[7].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -265,13 +273,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[8].getText().toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),tv[8].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[8].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
@@ -286,13 +295,14 @@ public class MathGameActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[9].getText().toString(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),tv[9].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[9].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
                     catch (Exception e){ }
                     mCountDownTimer=null;
+                    i=0;
                     mCountDownTimer = new MyCountDownTimer(50000, 95);
                     mCountDownTimer.start();
                     mathans=setNewEqn(mathscore);
