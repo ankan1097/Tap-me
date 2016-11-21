@@ -69,29 +69,239 @@ public class MathGameActivity extends AppCompatActivity {
         mathans=setNewEqn(mathscore);
 
 
-      for(j=0;j<9;j++){
-
-            tv[j].setOnClickListener(new View.OnClickListener(){
-                @Override
-                public  void onClick(View v) {
+//      for(j=0;j<9;j++){
+//
+//            tv[j].setOnClickListener(new View.OnClickListener(){
+//                @Override
+//                public  void onClick(View v) {
+////                    System.out.println(tv[j].getText().toString());
+//                    Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+//                    if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+//                         try {
+//                             mCountDownTimer.cancel();
+//                         }
+//                         catch (Exception e){ }
+//                        mCountDownTimer=null;
+//                        mCountDownTimer = new MyCountDownTimer(50000, 95);
+//                        mCountDownTimer.start();
+//                        mathans=setNewEqn(mathscore);
+//                    }
+//                    else {
+//
+//                    }
+//                }
+//            });
+//        }
+        j=0;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                    Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                    if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
-                         try {
-                             mCountDownTimer.cancel();
-                         }
-                         catch (Exception e){ }
-                        mCountDownTimer=null;
-                        mCountDownTimer = new MyCountDownTimer(50000, 95);
-                        mCountDownTimer.start();
-                        mathans=setNewEqn(mathscore);
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
                     }
-                    else {
-
-                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
                 }
-            });
-        }
+                else {
+
+                }
+            }
+        });
+        j=1;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
+        j=2;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
+        j=3;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
+        j=4;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
+        j=5;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
+        j=6;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
+        j=7;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
+        j=8;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
+        j=9;
+        tv[j].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+//                    System.out.println(tv[j].getText().toString());
+                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){ }
+                    mCountDownTimer=null;
+                    mCountDownTimer = new MyCountDownTimer(50000, 95);
+                    mCountDownTimer.start();
+                    mathans=setNewEqn(mathscore);
+                }
+                else {
+
+                }
+            }
+        });
     }
 
     public int setNewEqn(int mscore){
