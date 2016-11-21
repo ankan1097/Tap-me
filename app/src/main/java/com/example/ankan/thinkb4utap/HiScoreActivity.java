@@ -14,7 +14,7 @@ public class HiScoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hi_score);
         TextView textView = (TextView) findViewById(R.id.hi_score);
         textView.setText(SaveSharedPreference.getUserName(HiScoreActivity.this));
-        //textView.setTypeface(EasyFonts.greenAvocado(this));
+        textView.setTypeface(EasyFonts.ostrichBold(this));
 
         TextView ttt = (TextView) findViewById(R.id.tt);
         ttt.setTypeface(EasyFonts.ostrichRounded(this));
