@@ -23,6 +23,6 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/hi_score"
         android:textSize="30dp"
-        android:text="Your Best Yet:+\n"
+        android:text="Your Best Yet:\n"
         android:id="@+id/tt"/>
 </RelativeLayout>
