@@ -1,6 +1,7 @@
 package com.example.ankan.thinkb4utap;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -57,6 +58,7 @@ public class GameActivity extends AppCompatActivity {
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
                 } else {
+                    qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
                     mCountDownTimer.cancel();
                     mCountDownTimer = null;
@@ -80,6 +82,7 @@ public class GameActivity extends AppCompatActivity {
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
                 } else {
+                    qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     mCountDownTimer.cancel();
                     mCountDownTimer = null;
@@ -105,6 +108,7 @@ public class GameActivity extends AppCompatActivity {
                     mCountDownTimer.start();
                 }
                 else {
+                    qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
                     mCountDownTimer.cancel();
                     mCountDownTimer = null;
@@ -192,6 +196,7 @@ public class GameActivity extends AppCompatActivity {
             if (i == 100) {
                 i = 0;
                 if(ans!=0){
+                    qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
                     mCountDownTimer.cancel();
                     mCountDownTimer = null;
