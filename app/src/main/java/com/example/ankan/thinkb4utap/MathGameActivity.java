@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vstechlab.easyfonts.EasyFonts;
 
@@ -20,7 +21,7 @@ public class MathGameActivity extends AppCompatActivity {
     TextView eqntext;
     int mathscore;
     int mathans;
-    int i;
+    int i,j;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +30,9 @@ public class MathGameActivity extends AppCompatActivity {
         eqntext=(TextView) findViewById(R.id.eqn_ques);
 
         mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
+        i=0;
         mProgressBar.setProgress(i);
-        mCountDownTimer = new MyCountDownTimer(50000, 5);
+        mCountDownTimer = new MyCountDownTimer(50000, 95);
 
         mCountDownTimer.start();
 
@@ -67,12 +69,22 @@ public class MathGameActivity extends AppCompatActivity {
         mathans=setNewEqn(mathscore);
 
 
-        for(i=0;i<10;i++){
-            tv[i].setOnClickListener(new View.OnClickListener(){
+      for(j=0;j<9;j++){
+
+            tv[j].setOnClickListener(new View.OnClickListener(){
                 @Override
                 public  void onClick(View v) {
-                    if (Integer.parseInt(tv[i].getText().toString()) ==mathans) {
-
+//                    System.out.println(tv[j].getText().toString());
+                    Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
+                    if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                         try {
+                             mCountDownTimer.cancel();
+                         }
+                         catch (Exception e){ }
+                        mCountDownTimer=null;
+                        mCountDownTimer = new MyCountDownTimer(50000, 95);
+                        mCountDownTimer.start();
+                        mathans=setNewEqn(mathscore);
                     }
                     else {
 
@@ -134,8 +146,8 @@ public class MathGameActivity extends AppCompatActivity {
 
         @Override
         public void onTick(long millisUntilFinished) {
-            Log.v("Log_tag", "Tick of Progress" + i + "   " + millisUntilFinished);
-            i += 2;
+//            Log.v("Log_tag", "Tick of Progress" + i + "   " + millisUntilFinished);
+            i += 1;
 
             mProgressBar.setProgress(i);
 
@@ -144,7 +156,7 @@ public class MathGameActivity extends AppCompatActivity {
         @Override
         public void onFinish() {
             //Do what you want
-            i += 2;
+            i += 1;
             mProgressBar.setProgress(i);
 
         }

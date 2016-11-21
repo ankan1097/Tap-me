@@ -60,7 +60,7 @@ public class GameOverActivity extends Activity {
         math.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent((getApplicationContext(), MathGameActivity.class));
+                Intent intent = new Intent(getApplicationContext(), MathGameActivity.class);
                 startActivity(intent);
             }
         });
