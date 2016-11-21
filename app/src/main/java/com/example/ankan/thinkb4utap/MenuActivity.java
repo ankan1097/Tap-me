@@ -1,7 +1,10 @@
 package com.example.ankan.thinkb4utap;
 
+import android.app.Application;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,10 +20,12 @@ public class MenuActivity extends AppCompatActivity {
 
     FancyButton butt1, butt2, butt3;
     TypeWriter head;
+    private static MenuActivity instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance = this;
 
         setContentView(R.layout.activity_menu);
         TextView frst = (TextView)findViewById(R.id.first);
@@ -61,6 +66,10 @@ public class MenuActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public static Context getContext(){
+        return instance.getApplicationContext();
     }
 
     @Override
