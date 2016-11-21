@@ -168,7 +168,7 @@ public class GameActivity extends AppCompatActivity {
                 "Answer of (371/23-12)is?\n  and tap 3 for next","TAP 3 if You want to go to next level",
                 "TAP 3 if You want to increase score","Todays Date is?\n just tap 3 for next"};
 
-        String[] Pre={"Now ","If You are alive!\n ","If You are living ","Quick! ","Ready, ","Simon Says, ","Ahana Says, ","You must "};
+        String[] Pre={"Now   \n","If You are alive!\n ","If You are living\n","Quick !!!\n","Ready,  \n","Simon Says, \n","Ahana Says, \n"};
 
         Arrays.sort(Q0, new Comparator<String>() {
             public int compare(String o1, String o2) {
