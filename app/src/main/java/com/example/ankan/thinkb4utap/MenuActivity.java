@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import mehdi.sakout.fancybuttons.FancyButton;
+
 public class MenuActivity extends AppCompatActivity {
 
-    Button butt1, butt2, butt3;
+    FancyButton butt1, butt2, butt3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +22,9 @@ public class MenuActivity extends AppCompatActivity {
         if(SaveSharedPreference.getUserName(MenuActivity.this).length() == 0)
             SaveSharedPreference.setUserName(MenuActivity.this,""+0);
 
-        butt1 = (Button)findViewById(R.id.game);
-        butt2 = (Button)findViewById(R.id.score);
-        butt3 = (Button)findViewById(R.id.credits);
+        butt1 = (FancyButton)findViewById(R.id.game);
+        butt2 = (FancyButton) findViewById(R.id.score);
+        butt3 = (FancyButton) findViewById(R.id.credits);
 
         butt1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_menu"
     android:layout_width="match_parent"
@@ -10,21 +11,40 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ankan.thinkb4utap.MenuActivity">
 
-    <Button
-        android:id="@+id/game"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Play Game"/>
-    <Button
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/game"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fancy:fb_radius="30dp"
+        fancy:fb_fontIconResource="&#xf04b;"
+        fancy:fb_textSize="20dp"
+        fancy:fb_text="Play Game"/>
+    <mehdi.sakout.fancybuttons.FancyButton
         android:layout_below="@id/game"
         android:id="@+id/score"
         android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:layout_height="wrap_content"
-        android:text="Hi Score"/>
-    <Button
+        fancy:fb_fontIconResource="&#xf080;"
+        fancy:fb_textSize="20dp"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="Hi Score"/>
+    <mehdi.sakout.fancybuttons.FancyButton
         android:layout_below="@id/score"
         android:id="@+id/credits"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="The Team"/>
+        fancy:fb_fontIconResource="&#xf0c0;"
+        fancy:fb_textSize="20dp"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="The Team"/>
+    </LinearLayout>
 </RelativeLayout>
