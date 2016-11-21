@@ -93,12 +93,12 @@ public class MathGameActivity extends AppCompatActivity {
 //            });
 //        }
         j=0;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[0].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[0].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[0].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -114,12 +114,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=1;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[1].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[1].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[1].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -135,12 +135,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=2;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[2].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[2].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[2].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -156,12 +156,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=3;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[3].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[3].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[3].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -177,12 +177,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=4;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[4].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[4].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[4].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -198,12 +198,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=5;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[5].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[5].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[5].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -219,12 +219,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=6;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[6].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[6].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[6].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -240,12 +240,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=7;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[7].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[7].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[7].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -261,12 +261,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=8;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[8].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[8].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[8].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -282,12 +282,12 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
         j=9;
-        tv[j].setOnClickListener(new View.OnClickListener(){
+        tv[9].setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
 //                    System.out.println(tv[j].getText().toString());
-                Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-                if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
+                Toast.makeText(getApplicationContext(),tv[9].getText().toString(),Toast.LENGTH_LONG).show();
+                if (Integer.parseInt(tv[9].getText().toString()) ==mathans) {
                     try {
                         mCountDownTimer.cancel();
                     }
