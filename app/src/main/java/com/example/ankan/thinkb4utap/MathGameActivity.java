@@ -1,8 +1,13 @@
 package com.example.ankan.thinkb4utap;
 
+import android.content.Intent;
+import android.graphics.Paint;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.vstechlab.easyfonts.EasyFonts;
@@ -10,6 +15,8 @@ import com.vstechlab.easyfonts.EasyFonts;
 public class MathGameActivity extends AppCompatActivity {
 
     TextView tv[]=new TextView[10];
+    ProgressBar mProgressBar;
+    MyCountDownTimer mCountDownTimer;
     TextView eqntext;
     int mathscore;
     int mathans;
@@ -20,6 +27,12 @@ public class MathGameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_math_game);
 
         eqntext=(TextView) findViewById(R.id.eqn_ques);
+
+        mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
+        mProgressBar.setProgress(i);
+        mCountDownTimer = new MyCountDownTimer(50000, 5);
+
+        mCountDownTimer.start();
 
         tv[0]=(TextView) findViewById(R.id.xx0);
         tv[0].setText("0");
@@ -109,5 +122,32 @@ public class MathGameActivity extends AppCompatActivity {
         eqntext.setText(q);
 //        System.out.println("aff   "+q);
         return rans;
+    }
+
+
+
+    public class MyCountDownTimer extends CountDownTimer {
+
+        public MyCountDownTimer(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+        }
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+            Log.v("Log_tag", "Tick of Progress" + i + "   " + millisUntilFinished);
+            i += 2;
+
+            mProgressBar.setProgress(i);
+
+        }
+
+        @Override
+        public void onFinish() {
+            //Do what you want
+            i += 2;
+            mProgressBar.setProgress(i);
+
+        }
+
     }
 }

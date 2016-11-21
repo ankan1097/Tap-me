@@ -18,7 +18,7 @@ import org.w3c.dom.Text;
 public class GameOverActivity extends Activity {
 
     TextView tv;
-    Button gob;
+    Button gob, math;
     Animation slide_in;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,7 @@ public class GameOverActivity extends Activity {
         tv.setTypeface(EasyFonts.ostrichBold(this));
 
         gob = (Button) findViewById(R.id.playagain);
+        math = (Button) findViewById(R.id.math);
 
         gob.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +55,14 @@ public class GameOverActivity extends Activity {
                 startActivity(intent);
             }
 
+        });
+
+        math.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent((getApplicationContext(), MathGameActivity.class));
+                startActivity(intent);
+            }
         });
 
     }
