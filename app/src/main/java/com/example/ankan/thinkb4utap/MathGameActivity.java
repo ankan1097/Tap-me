@@ -68,30 +68,6 @@ public class MathGameActivity extends AppCompatActivity {
         tv[9].setTypeface(EasyFonts.captureIt(this));
         mathans=setNewEqn(mathscore);
 
-
-//      for(j=0;j<9;j++){
-//
-//            tv[j].setOnClickListener(new View.OnClickListener(){
-//                @Override
-//                public  void onClick(View v) {
-////                    System.out.println(tv[j].getText().toString());
-//                    Toast.makeText(getApplicationContext(),tv[j].getText().toString(),Toast.LENGTH_LONG).show();
-//                    if (Integer.parseInt(tv[j].getText().toString()) ==mathans) {
-//                         try {
-//                             mCountDownTimer.cancel();
-//                         }
-//                         catch (Exception e){ }
-//                        mCountDownTimer=null;
-//                        mCountDownTimer = new MyCountDownTimer(50000, 95);
-//                        mCountDownTimer.start();
-//                        mathans=setNewEqn(mathscore);
-//                    }
-//                    else {
-//
-//                    }
-//                }
-//            });
-//        }
         j=0;
         tv[0].setOnClickListener(new View.OnClickListener(){
             @Override
@@ -99,6 +75,7 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[0].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[0].getText().toString()) ==mathans) {
+                    mathscore++;
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -109,7 +86,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
-
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 }
             }
         });
@@ -120,6 +110,8 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[1].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[1].getText().toString()) ==mathans) {
+                    mathscore++;
+
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -130,7 +122,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
-
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 }
             }
         });
@@ -141,6 +146,8 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[2].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[2].getText().toString()) ==mathans) {
+                    mathscore++;
+
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -151,7 +158,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
-
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 }
             }
         });
@@ -162,6 +182,8 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[3].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[3].getText().toString()) ==mathans) {
+                    mathscore++;
+
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -172,6 +194,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 }
             }
@@ -183,6 +219,8 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[4].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[4].getText().toString()) ==mathans) {
+                    mathscore++;
+
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -193,6 +231,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 }
             }
@@ -204,6 +256,8 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[5].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[5].getText().toString()) ==mathans) {
+                    mathscore++;
+
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -214,6 +268,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 }
             }
@@ -225,6 +293,8 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[6].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[6].getText().toString()) ==mathans) {
+                    mathscore++;
+
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -235,6 +305,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 }
             }
@@ -246,6 +330,8 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[7].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[7].getText().toString()) ==mathans) {
+                    mathscore++;
+
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -256,6 +342,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 }
             }
@@ -267,6 +367,8 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[8].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[8].getText().toString()) ==mathans) {
+                    mathscore++;
+
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -277,6 +379,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 }
             }
@@ -288,6 +404,7 @@ public class MathGameActivity extends AppCompatActivity {
 //                    System.out.println(tv[j].getText().toString());
                 Toast.makeText(getApplicationContext(),tv[9].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[9].getText().toString()) ==mathans) {
+                    mathscore++;
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -298,6 +415,20 @@ public class MathGameActivity extends AppCompatActivity {
                     mathans=setNewEqn(mathscore);
                 }
                 else {
+                    i+=30;
+                    Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    GameActivity.score=mathscore;
+                    mathscore=0;
+                    Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
+                    mCountDownTimer = null;
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
                 }
             }
@@ -320,12 +451,14 @@ public class MathGameActivity extends AppCompatActivity {
         }
         else if(7<=opr && opr<=8)// 20%  X
         {
-            a=a%10;
+            a=a%9+1;
+            b+=1;
             q="" + a + " x " + b + " = "+(a*b);
         }
         else // 0%  /
         {
             b=b%9+1;
+            a+=1;
             a=a/b;
             q="" + (a*b) + " / " + b + " = "+a;
         }
@@ -358,7 +491,9 @@ public class MathGameActivity extends AppCompatActivity {
         public void onTick(long millisUntilFinished) {
 //            Log.v("Log_tag", "Tick of Progress" + i + "   " + millisUntilFinished);
             i += 1;
+            if(i>=106){
 
+            }
             mProgressBar.setProgress(i);
 
         }
