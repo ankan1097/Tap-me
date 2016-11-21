@@ -176,7 +176,7 @@ public class GameActivity extends AppCompatActivity {
                 qesn = Q3[(int) (Math.random() * Q3.length)];
                 break;
         }
-        if( ((int)(Math.random() * 10)) <=3 ){//40% chance
+        if( ((int)(Math.random() * 10)) <=5 && qesn.length()<=25 ){//40% chance
             qesn=Pre[(int) (Math.random() * Pre.length)] + qesn;
         }
 
