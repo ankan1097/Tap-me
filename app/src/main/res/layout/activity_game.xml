@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/menubg"
     tools:context="com.example.ankan.thinkb4utap.GameActivity">
 
     <ProgressBar
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/progressbar"
         android:id="@+id/questiontext"
+        android:textColor="#ffffff"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textSize="25dp"/>
@@ -33,15 +35,17 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="170dp"
         android:layout_alignParentBottom="true"
+        android:textColor="#ff0000"
         android:layout_centerHorizontal="true"
-        android:textSize="17dp"
+        android:textSize="37dp"
         android:id="@+id/score"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score:"
-        android:textSize="20dp"
+        android:textSize="27dp"
         android:layout_above="@+id/score"
+        android:textColor="#ff0000"
         android:layout_centerHorizontal="true"
         android:id="@+id/scr"/>
     <Button
