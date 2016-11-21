@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.concurrent.TimeUnit;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -68,6 +69,7 @@ public class GameActivity extends AppCompatActivity {
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
                     mCountDownTimer.cancel();
                     mCountDownTimer = null;
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     startActivity(intent);
                 }
             }
@@ -92,6 +94,7 @@ public class GameActivity extends AppCompatActivity {
                 } else {
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     mCountDownTimer.cancel();
                     mCountDownTimer = null;
                     startActivity(intent);
@@ -120,6 +123,7 @@ public class GameActivity extends AppCompatActivity {
                 else {
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     mCountDownTimer.cancel();
                     mCountDownTimer = null;
                     startActivity(intent);
@@ -231,6 +235,7 @@ public class GameActivity extends AppCompatActivity {
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
                     mCountDownTimer.cancel();
                     mCountDownTimer = null;
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     startActivity(intent);
                 }
                 else {

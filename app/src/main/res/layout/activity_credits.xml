@@ -16,24 +16,27 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Ankan Sardar"
-    android:textSize="30dp"
+    android:layout_marginBottom="15dp"
+    android:textSize="10dp"
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
     android:id="@+id/ankan"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ankan"
+        android:layout_above="@id/ankan"
         android:text="Srijit Dutta"
-        android:textSize="30dp"
+        android:textSize="10dp"
+        android:layout_marginBottom="15dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/srijit"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ankan"
+        android:layout_below="@id/ankan"
         android:text="Raunaque Patra"
-        android:textSize="30dp"
+        android:textSize="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/raunaq"/>
 

@@ -1,10 +1,13 @@
 package com.example.ankan.thinkb4utap;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -12,13 +15,15 @@ import com.vstechlab.easyfonts.EasyFonts;
 
 import org.w3c.dom.Text;
 
-public class GameOverActivity extends AppCompatActivity {
+public class GameOverActivity extends Activity {
 
     TextView tv;
     Button gob;
+    Animation slide_in;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        slide_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in);
         setContentView(R.layout.activity_game_over);
 //        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gali);
 //        mp.start();
