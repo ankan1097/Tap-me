@@ -16,91 +16,81 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="76dp"
-        android:id="@+id/textView1" />
+        android:id="@+id/eqn_ques" />
 
     <TextView
-        android:text="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/eqn_ques"
         android:layout_alignParentStart="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="81dp"
-        android:id="@+id/textView2" />
+        android:id="@+id/xx1" />
 
     <TextView
-        android:text="2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignEnd="@+id/textView1"
-        android:id="@+id/textView3" />
+        android:layout_alignTop="@+id/xx1"
+        android:layout_alignEnd="@+id/eqn_ques"
+        android:id="@+id/xx2" />
 
     <TextView
-        android:text="3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView3"
+        android:layout_alignTop="@+id/xx2"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="32dp"
-        android:id="@+id/textView4" />
+        android:id="@+id/xx3" />
 
     <TextView
-        android:text="4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2"
+        android:layout_below="@+id/xx1"
+        android:layout_alignEnd="@+id/xx1"
         android:layout_marginTop="51dp"
-        android:id="@+id/textView5" />
+        android:id="@+id/xx4" />
 
     <TextView
-        android:text="5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView5"
-        android:layout_alignEnd="@+id/textView3"
-        android:id="@+id/textView6" />
+        android:layout_alignTop="@+id/xx4"
+        android:layout_alignEnd="@+id/xx2"
+        android:id="@+id/xx5" />
 
     <TextView
-        android:text="6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView6"
-        android:layout_alignEnd="@+id/textView4"
-        android:id="@+id/textView7" />
+        android:layout_alignTop="@+id/xx5"
+        android:layout_alignEnd="@+id/xx3"
+        android:id="@+id/xx6" />
 
     <TextView
-        android:text="7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/textView5"
-        android:layout_alignStart="@+id/textView5" />
+        android:id="@+id/xx7"
+        android:layout_below="@+id/xx4"
+        android:layout_alignStart="@+id/xx4" />
 
     <TextView
-        android:text="8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView8"
-        android:layout_alignEnd="@+id/textView6"
-        android:id="@+id/textView11" />
+        android:layout_alignTop="@+id/xx7"
+        android:layout_alignEnd="@+id/xx5"
+        android:id="@+id/xx8" />
 
     <TextView
-        android:text="9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView11"
-        android:layout_alignStart="@+id/textView7"
-        android:id="@+id/textView12" />
+        android:layout_alignBottom="@+id/xx8"
+        android:layout_alignStart="@+id/xx6"
+        android:id="@+id/xx9" />
 
     <TextView
-        android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="53dp"
-        android:id="@+id/textView13"
-        android:layout_below="@+id/textView11"
-        android:layout_alignStart="@+id/textView11" />
+        android:id="@+id/xx0"
+        android:layout_below="@+id/xx8"
+        android:layout_alignStart="@+id/xx8" />
 </RelativeLayout>
