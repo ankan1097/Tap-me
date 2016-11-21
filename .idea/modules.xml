@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tap-me.iml" filepath="$PROJECT_DIR$/Tap-me.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ThinkB4UTap.iml" filepath="$PROJECT_DIR$/ThinkB4UTap.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
