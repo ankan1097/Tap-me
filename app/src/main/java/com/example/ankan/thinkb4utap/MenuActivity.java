@@ -7,17 +7,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.vstechlab.easyfonts.EasyFonts;
 
 import mehdi.sakout.fancybuttons.FancyButton;
 
 public class MenuActivity extends AppCompatActivity {
 
     FancyButton butt1, butt2, butt3;
+    TypeWriter head;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_menu);
+        TextView frst = (TextView)findViewById(R.id.first);
+        TextView sec = (TextView)findViewById(R.id.second);
+        TextView hd = (TextView) findViewById(R.id.heading);
+        frst.setTypeface(EasyFonts.androidNation(this));
+        sec.setTypeface(EasyFonts.androidNation(this));
+        hd.setTypeface(EasyFonts.androidNation(this));
+        head = new TypeWriter(hd);
+        head.animateText("TAP");
 
         if(SaveSharedPreference.getUserName(MenuActivity.this).length() == 0)
             SaveSharedPreference.setUserName(MenuActivity.this,""+0);
@@ -25,6 +38,7 @@ public class MenuActivity extends AppCompatActivity {
         butt1 = (FancyButton)findViewById(R.id.game);
         butt2 = (FancyButton) findViewById(R.id.score);
         butt3 = (FancyButton) findViewById(R.id.credits);
+
 
         butt1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

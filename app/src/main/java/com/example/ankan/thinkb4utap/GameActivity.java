@@ -79,10 +79,9 @@ public class GameActivity extends AppCompatActivity {
                     }
                     catch (Exception e){}
                     mCountDownTimer = null;
-                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     startActivity(intent);
                     finish();
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 }
             }
         });
@@ -117,7 +116,7 @@ public class GameActivity extends AppCompatActivity {
                     mCountDownTimer = null;
                     startActivity(intent);
                     finish();
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 }
             }
         });
@@ -154,7 +153,7 @@ public class GameActivity extends AppCompatActivity {
                     mCountDownTimer = null;
                     startActivity(intent);
                     finish();
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 }
             }
         });
@@ -292,9 +291,8 @@ public class GameActivity extends AppCompatActivity {
                     }
                     catch (Exception e){}
                     mCountDownTimer = null;
-                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     startActivity(intent);
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 }
                 else {
                     ans=(int)(Math.random()*4);

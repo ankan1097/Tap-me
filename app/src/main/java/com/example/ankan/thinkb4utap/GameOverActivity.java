@@ -33,9 +33,16 @@ public class GameOverActivity extends Activity {
 
         String txts[]={"Game Over Loser", "You Are Hopeless", "Better Luck Next Time","Are You Using Your Nose to Play",
                 "Concentrate Hard", "Nah! Not Ready Yet", "Work Hard Man"};
+        String txts2[]={"Pretty Good", "Impressing", "Well Played", "Okay Now You Are In Top 10%"};
         tv = (TextView) findViewById(R.id.gameovertext);
         int j=(int)(Math.random()*7);
-        tv.setText(txts[j]+"\n");
+        int k=(int)(Math.random()*4);
+        if(GameActivity.score<10) {
+            tv.setText(txts[j] + "\n");
+        }
+        else {
+            tv.setText(txts2[k] + "\n");
+        }
         tv.setTypeface(EasyFonts.ostrichBold(this));
 
         gob = (Button) findViewById(R.id.playagain);
