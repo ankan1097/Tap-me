@@ -65,16 +65,24 @@ public class GameActivity extends AppCompatActivity {
                     if(score > Integer.parseInt(SaveSharedPreference.getUserName(GameActivity.this)))
                         SaveSharedPreference.setUserName(getApplicationContext(), ""+score);
                     i=0;
-                    mCountDownTimer.cancel();
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
                 } else {
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
-                    mCountDownTimer.cancel();
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
                     mCountDownTimer = null;
-                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }
             }
         });
@@ -92,16 +100,24 @@ public class GameActivity extends AppCompatActivity {
                     if(score > Integer.parseInt(SaveSharedPreference.getUserName(GameActivity.this)))
                         SaveSharedPreference.setUserName(getApplicationContext(), ""+score);
                     i=0;
-                    mCountDownTimer.cancel();
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
                 } else {
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
-                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-                    mCountDownTimer.cancel();
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
                     mCountDownTimer = null;
                     startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }
             }
         });
@@ -120,17 +136,25 @@ public class GameActivity extends AppCompatActivity {
                     if(score > Integer.parseInt(SaveSharedPreference.getUserName(GameActivity.this)))
                         SaveSharedPreference.setUserName(getApplicationContext(), ""+score);
                     i=0;
-                    mCountDownTimer.cancel();
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
                 }
                 else {
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
-                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-                    mCountDownTimer.cancel();
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
                     mCountDownTimer = null;
                     startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }
             }
         });
@@ -263,10 +287,14 @@ public class GameActivity extends AppCompatActivity {
                 if(ans!=0){
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
-                    mCountDownTimer.cancel();
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
                     mCountDownTimer = null;
-                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }
                 else {
                     ans=(int)(Math.random()*4);
@@ -276,7 +304,10 @@ public class GameActivity extends AppCompatActivity {
                     scr.setText(""+score);
                     if(score > Integer.parseInt(SaveSharedPreference.getUserName(GameActivity.this)))
                         SaveSharedPreference.setUserName(getApplicationContext(), ""+score);
-                    mCountDownTimer.cancel();
+                    try {
+                        mCountDownTimer.cancel();
+                    }
+                    catch (Exception e){}
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
                 }

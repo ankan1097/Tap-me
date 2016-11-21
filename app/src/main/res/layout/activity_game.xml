@@ -14,6 +14,7 @@
         android:id="@+id/progressbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:max="100"
         android:progress="100"
         style="?android:attr/progressBarStyleHorizontal" />
@@ -25,34 +26,41 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textSize="25dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="17dp"
+        android:id="@+id/score"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:textSize="20dp"
+        android:layout_above="@+id/score"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/scr"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/questiontext"
-        android:id="@+id/button1"/>
+        android:layout_above="@id/scr"
+        android:id="@+id/button3"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button1"
+        android:layout_above="@id/button3"
         android:id="@+id/button2"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button2"
-        android:id="@+id/button3"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/button3"
-        android:text="Score:"
-        android:textSize="20dp"
-        android:layout_centerInParent="true"
-        android:id="@+id/scr"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/scr"
-        android:layout_centerInParent="true"
-        android:textSize="17dp"
-        android:id="@+id/score"/>
+        android:layout_above="@id/button2"
+        android:id="@+id/button1"/>
+
+
+
+
 </RelativeLayout>
