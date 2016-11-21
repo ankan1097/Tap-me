@@ -19,7 +19,7 @@ public class GameActivity extends AppCompatActivity {
     int i = 0, ans;
     TextView qtext;
     Button bt1, bt2, bt3;
-    int score = 0;
+    static int score = 0;
     TextView scr;
 
     @Override

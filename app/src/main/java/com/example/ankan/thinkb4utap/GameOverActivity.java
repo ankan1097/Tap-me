@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.vstechlab.easyfonts.EasyFonts;
+
+import org.w3c.dom.Text;
+
 public class GameOverActivity extends AppCompatActivity {
 
     TextView tv;
@@ -16,10 +20,19 @@ public class GameOverActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gali);
-        mp.start();
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gali);
+//        mp.start();
+        TextView tt=(TextView) findViewById(R.id.disp_score);
+        tt.setText("SCORE: "+GameActivity.score+"\n");
+        tt.setTypeface(EasyFonts.ostrichBold(this));
+
+        String txts[]={"Game Over Loser", "You Are Hopeless", "Better Luck Next Time","Are You Using Your Nose to Play",
+                "Concentrate Hard", "Nah! Not Ready Yet", "Work Hard Man"};
         tv = (TextView) findViewById(R.id.gameovertext);
-        tv.setText("game over loser");
+        int j=(int)(Math.random()*7);
+        tv.setText(txts[j]+"\n");
+        tv.setTypeface(EasyFonts.ostrichBold(this));
+
         gob = (Button) findViewById(R.id.playagain);
 
         gob.setOnClickListener(new View.OnClickListener() {
