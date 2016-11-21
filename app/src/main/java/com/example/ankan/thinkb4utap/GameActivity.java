@@ -147,10 +147,10 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void getquestion(int Qch) {
-        String[] Q0 = { "Wait","W-A-I-T","W\nA\nI\nT","Sit for 2 seconds", "HALT", "Do Nothing", "It wont be Long",
+        String[] Q0 = { "Wait","Patience","W\nA\nI\nT","Sit for 2 seconds", "HALT", "Do Nothing", "It wont be Long",
                 "Dont Tap 1 or 2 or 3","Next One is :","Next One is Coming Just Wait",
-                "Tap Nothing","TAP 2 for Defeat","TAP 1 if You Want to End This",
-                "TAP 2 if You want to end this","TAP 3 or 1 if You Accept Defeat","TAP 3 to Lose",};
+                "Tap Nothing","W-A-I-T","Don't Put Your Fingers On the Screen","Neither 1, Nor 2 and Of Course Not 3",
+        "STOP!!","Just Focus On Me"};
 
         String[] Q1 = {"Tap 1","T\nA\nP\n1", "Just Tap 1","Do Not Tap 2\nTap 1", "Don't Tap 3, Tap 1",
                 "Tap 1 to go to Next One", "Just Tap 1 to go to Next One", "Do not Tap 2, Tap 1 to go to Next One",
