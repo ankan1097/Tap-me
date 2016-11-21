@@ -13,6 +13,7 @@ public class MathGameActivity extends AppCompatActivity {
     TextView eqntext;
     int mathscore;
     int mathans;
+    int i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,14 +51,63 @@ public class MathGameActivity extends AppCompatActivity {
         tv[9]=(TextView) findViewById(R.id.xx9);
         tv[9].setText("9");
         tv[9].setTypeface(EasyFonts.captureIt(this));
+        mathans=setNewEqn(mathscore);
 
-        for(int i=0;i<10;i++){
+
+        for(i=0;i<10;i++){
             tv[i].setOnClickListener(new View.OnClickListener(){
                 @Override
                 public  void onClick(View v) {
+                    if (Integer.parseInt(tv[i].getText().toString()) ==mathans) {
 
+                    }
+                    else {
+
+                    }
                 }
             });
         }
+    }
+
+    public int setNewEqn(int mscore){
+        int a = (int)(Math.random()*100);
+        int b = (int)(Math.random()*100);
+        int opr=(int)(Math.random()*10);
+        int rans;
+        String q="";
+        if(0<=opr && opr<=3)// 40%  +
+        {
+            q="" + a + " + " + b + " = "+(a+b);
+        }
+        else if(4<=opr && opr<=6)// 30%  -
+        {
+            q="" + Math.max(a,b) + " - " + Math.min(a,b) + " = "+Math.abs(a-b);
+        }
+        else if(7<=opr && opr<=8)// 20%  X
+        {
+            a=a%10;
+            q="" + a + " x " + b + " = "+(a*b);
+        }
+        else // 0%  /
+        {
+            b=b%9+1;
+            a=a/b;
+            q="" + (a*b) + " / " + b + " = "+a;
+        }
+        int r=1;
+        //System.out.println("r="+r+" before  "+q);
+        for(r=(int)(Math.random()*q.length());true;r=(int)(Math.random()*q.length()))
+        {
+            //System.out.println(q+"   "+r);
+            if(q.charAt(r)!='=' && q.charAt(r)!=' ' && q.charAt(r)!='+' && q.charAt(r)!='-'&&q.charAt(r)!='x'&&q.charAt(r)!='/')
+            {
+                rans=q.charAt(r)-48;
+                q=q.substring(0,r)+'_'+q.substring(r+1);
+                break;
+            }
+        }
+        eqntext.setText(q);
+//        System.out.println("aff   "+q);
+        return rans;
     }
 }
