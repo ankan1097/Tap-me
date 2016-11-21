@@ -23,6 +23,7 @@ public class GameActivity extends AppCompatActivity {
     TextView qtext;
     Button bt1, bt2, bt3;
     static int score = 0;
+    int prevrandn=-1;
     TextView scr;
 
     @Override
@@ -44,7 +45,10 @@ public class GameActivity extends AppCompatActivity {
         mCountDownTimer.start();
         ans = (int) (Math.random() * 4);
         getquestion(ans);
-        setButtntext();
+//        setButtntext();
+        bt1.setText("1");
+        bt2.setText("2");
+        bt3.setText("3");
 
 
         bt1.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +57,7 @@ public class GameActivity extends AppCompatActivity {
                 if (Integer.parseInt(bt1.getText().toString()) == ans) {
                     ans=(int)(Math.random()*4);
                     getquestion(ans);
-                    if( ((int)(Math.random() * 10)) <=2 ) {//30% chance
+                    if( ((int)(Math.random() * 10)) <=4 ) {//50% chance
                         setButtntext();
                     }                    score++;
                     scr.setText(""+score);
@@ -79,7 +83,7 @@ public class GameActivity extends AppCompatActivity {
 
                     ans = (int) (Math.random() * 4);
                     getquestion(ans);
-                    if( ((int)(Math.random() * 10)) <=2 ) {//30% chance
+                    if( ((int)(Math.random() * 10)) <=4 ) {//50% chance
                         setButtntext();
                     }                    score++;
                     scr.setText(""+score);
@@ -105,7 +109,7 @@ public class GameActivity extends AppCompatActivity {
                 if ( Integer.parseInt(bt3.getText().toString()) == ans ){
                     ans=(int)(Math.random()*4);
                     getquestion(ans);
-                    if( ((int)(Math.random() * 10)) <=2 ) {//30% chance
+                    if( ((int)(Math.random() * 10)) <=4 ) {//50% chance
                         setButtntext();
                     }
                     score++;
@@ -139,34 +143,36 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void getquestion(int Qch) {
-        String[] Q0 = { "wait","W-A-I-T","W\nA\nI\nT","sit for 2 seconds", "just wait", "do nothing", "It wont be long",
-                "dont tap 1 or 2 or 3","next one is :","next one is comming just wait",
-                "tap nothing","T-A-P nothing","TAP 2 for defeat","TAP 1 if You want to end this",
-                "TAP 2 if You want to end this","TAP 3 or 1 if You accept defeat","TAP 3 to sleep",};
+        String[] Q0 = { "Wait","W-A-I-T","W\nA\nI\nT","Sit for 2 seconds", "HALT", "Do Nothing", "It wont be Long",
+                "Dont Tap 1 or 2 or 3","Next One is :","Next One is Coming Just Wait",
+                "Tap Nothing","TAP 2 for Defeat","TAP 1 if You Want to End This",
+                "TAP 2 if You want to end this","TAP 3 or 1 if You Accept Defeat","TAP 3 to Lose",};
 
-        String[] Q1 = {"tap 1","T\nA\nP\n1", "just tap 1","do not tap 2\ntap 1", "don't tap 3 tap 1",
-                "tap 1 to go to next one", "just tap 1 to go to next one", "do not tap 2 tap 1 to go to next one",
-                "don't tap 3 or 2 tap 1 to go to next one","What is 2-1 Tap that one","What is 3-2?\n Tap that one",
-                "tap 1 and wait", "just tap 1 and wait", "do not TAP2 TAP1",
-                "don't T-A-P 3 T-A-P 1","sqrt(3249)/19 = ? don't calculate just tap 1",
-                "Answer of (221/17-11)is?  and tap 1 for next","TAP 1 if You want to go to next level",
-                "TAP 1 if You want to increase score","Todays Date is?\n just tap 1 for next level"};
+        String[] Q1 = {"Tap 1","T\nA\nP\n1", "Just Tap 1","Do Not Tap 2\nTap 1", "Don't Tap 3, Tap 1",
+                "Tap 1 to go to Next One", "Just Tap 1 to go to Next One", "Do not Tap 2, Tap 1 to go to Next One",
+                "Don't Tap 3 or 2, Tap 1 to go to next one","Tap (2-1)","What is 3-2?\n Tap that one",
+                "Tap 1 and Wait", "Just Tap 1 and Wait","Tap 1 Dont Touch Others",
+                "Don't T-A-P 3, T-A-P 1","sqrt(3249)/19 = ? don't Calculate Just Tap 1",
+                "Answer of (221/17-11)is?\n Tap 1 for Next","TAP 1 if You want to go to Next Level",
+                "Tap 1 if You want to increase score","Todays Date is __?\n Just Tap 1 for Next Level"};
 
-        String[] Q2 = {"tap 2","T\nA\nP\n2","just tap 2", "do not tap 3 tap 2", "don't tap 1 tap 2",
-                "tap 2 to go to next one", "just tap 2 to go to next one", "do not tap 3 tap 1 to go to next one",
-                "don't tap 3 or 1 tap 2 to go to next one","What is 3-1 Tap that one","What is 1+1? Tap that one",
-                "tap 2 and wait", "just tap 2 and wait", "do not TAP3 TAP2",
-                "don't T-A-P 3 T-A-P 2","sqrt(5249)/19 = ? don't calculate just tap 2",
-                "Answer of (251/17-11)is?\n  and tap 2 for next","TAP 2 if You want to go to next level",
-                "TAP 2 if You want to increase score","Todays Date is?\n just tap 2 for next"};
+        String[] Q2 = {"Tap 2","T\nA\nP\n2", "Just Tap 2","Do Not Tap 1\nTap 2", "Don't Tap 3, Tap 2",
+                "Tap 2 to go to Next One", "Just Tap 2 to go to Next One", "Do not Tap 1, Tap 2 to go to Next One",
+                "Don't Tap 3 or 1, Tap 2 to go to next one","Tap (3-1)","What is 1+1?\n Tap that one",
+                "Tap 2 and Wait", "Just Tap 2 and Wait","Tap 2 Dont Touch Others",
+                "Don't T-A-P 3, T-A-P 2 Instead","sqrt(3249)/19 = ? don't Calculate Just Tap 2",
+                "Answer of (465/17-15)is?\n Tap 2 for Next","TAP 2 if You want to go to Next Level",
+                "Tap 2 if You want to increase score","Todays Date is __?\n Just Tap 2 for Next Level",
+                "Last Digit of Current Time?\n Just Tap 2 for Next Level"};
 
-        String[] Q3 = {"tap 3","T\nA\nP\n3", "just tap 3", "do not tap 2 tap 3", "don't tap 1 tap 3",
-                "tap 3 to go to next one", "just tap 3 to go to next level", "do not tap 2 tap 3 to go to next one",
-                "don't tap 1 or 2 tap 3 to go to next one","What is 2+1 Tap that one","What is 3-0?\n Tap that one",
-                "tap 3 and wait", "just tap 3 and wait", "do not TAP2 TAP3",
-                "don't T-A-P 1 T-A-P 3","sqrt(3249)/17 = ? don't calculate just tap 3",
-                "Answer of (371/23-12)is?\n  and tap 3 for next","TAP 3 if You want to go to next level",
-                "TAP 3 if You want to increase score","Todays Date is?\n just tap 3 for next"};
+        String[] Q3 = {"Tap 3","T\nA\nP\n3", "Just Tap 3","Do Not Tap 1\nTap 3", "Don't Tap 2, Tap 3",
+                "Tap 3 to go to Next One", "Just Tap 3 to go to Next One", "Do not Tap 1, Tap 3 to go to Next One",
+                "Don't Tap 2 or 1, Tap 3 to go to next one","Tap (3-0)","What is 1+2?\n Tap that one",
+                "Tap 3 and Wait", "Just Tap 3 and Wait","Tap 3 Dont Touch Others",
+                "Don't T-A-P 1, T-A-P 3 Instead","sqrt(1249)/7 = ? don't Calculate Just Tap 3",
+                "Answer of (865/24-15)is?\n Tap 3 for Next","TAP 3 if You want to go to Next Level",
+                "Tap 3 if You want to increase score","Todays Date is __?\n Just Tap 3 for Next Level",
+                "Last Digit of Current Time?\n Just Tap 3 for Next Level"};
 
         String[] Pre={"Now   \n","If You are alive!\n ","If You are living\n","Quick !!!\n","Ready,  \n","Simon Says, \n","Ahana Says, \n"};
 
@@ -191,20 +197,44 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-        int ch;
+        int ch,r;
         String qesn;
         switch (Qch) {
             case 0:
-                qesn = Q0[(int) (Math.random() * Math.min(Q0.length, 4 + score))];
+                r=(int) (Math.random() * Math.min(Q0.length, 4 + score));
+                while(r==prevrandn)
+                {
+                    r=(int) (Math.random() * Math.min(Q0.length, 4 + score));
+                }
+                prevrandn=r;
+                qesn = Q0[r];
                 break;
             case 1:
-                qesn = Q1[(int) (Math.random() * Math.min(Q1.length,4+score ))];
+                r=(int) (Math.random() * Math.min(Q1.length, 4 + score));
+                while(r==prevrandn)
+                {
+                    r=(int) (Math.random() * Math.min(Q1.length, 4 + score));
+                }
+                prevrandn=r;
+                qesn = Q1[r];
                 break;
             case 2:
-                qesn = Q2[(int) (Math.random() * Math.min(Q2.length,4+score ))];
+                r=(int) (Math.random() * Math.min(Q2.length, 4 + score));
+                while(r==prevrandn)
+                {
+                    r=(int) (Math.random() * Math.min(Q2.length, 4 + score));
+                }
+                prevrandn=r;
+                qesn = Q2[r];
                 break;
             default:
-                qesn = Q3[(int) (Math.random() * Math.min(Q3.length,4+score ))];
+                r=(int) (Math.random() * Math.min(Q3.length, 4 + score));
+                while(r==prevrandn)
+                {
+                    r=(int) (Math.random() * Math.min(Q3.length, 4 + score));
+                }
+                prevrandn=r;
+                qesn = Q3[r];
                 break;
         }
         if( ((int)(Math.random() * 10)) <=4 && qesn.length()<=25 && score>8){//40% chance
