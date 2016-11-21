@@ -1,8 +1,11 @@
 package com.example.ankan.thinkb4utap;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +17,8 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.concurrent.TimeUnit;
+
+import static android.graphics.Color.RED;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -72,7 +77,12 @@ public class GameActivity extends AppCompatActivity {
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
                 } else {
+                    bt1.setBackgroundColor(RED);
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(400);
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.wrong);
+                    mp.start();
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
                     try {
                         mCountDownTimer.cancel();
@@ -106,7 +116,12 @@ public class GameActivity extends AppCompatActivity {
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
                 } else {
+                    bt2.setBackgroundColor(RED);
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(400);
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.wrong);
+                    mp.start();
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     try {
@@ -143,7 +158,12 @@ public class GameActivity extends AppCompatActivity {
                     mCountDownTimer.start();
                 }
                 else {
+                    bt3.setBackgroundColor(RED);
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(400);
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.wrong);
+                    mp.start();
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     try {
@@ -285,6 +305,10 @@ public class GameActivity extends AppCompatActivity {
                 i = 0;
                 if(ans!=0){
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(400);
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.wrong);
+                    mp.start();
                     Intent intent=new Intent(getApplicationContext(),GameOverActivity.class);
                     try {
                         mCountDownTimer.cancel();
