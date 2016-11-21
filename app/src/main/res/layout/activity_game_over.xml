@@ -13,8 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/playagain"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/gameovertext"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/gameovertext"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/disp_score"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
