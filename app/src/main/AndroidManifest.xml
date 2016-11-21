@@ -23,6 +23,7 @@
         <activity android:name=".HiScoreActivity" />
         <activity android:name=".MathGameActivity" />
         <activity android:name=".ModeActivity"></activity>
+
     </application>
 
 </manifest>
