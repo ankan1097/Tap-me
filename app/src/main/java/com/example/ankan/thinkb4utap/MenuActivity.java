@@ -17,6 +17,9 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        if(SaveSharedPreference.getUserName(MenuActivity.this).length() == 0)
+            SaveSharedPreference.setUserName(MenuActivity.this,""+0);
+
         butt1 = (Button)findViewById(R.id.game);
         butt2 = (Button)findViewById(R.id.score);
         butt3 = (Button)findViewById(R.id.credits);
@@ -29,8 +32,15 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
         butt3.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), CreditsActivity.class);
+                        startActivity(intent);
+
+            }
+        });
+        butt2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CreditsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), HiScoreActivity.class);
                 startActivity(intent);
 
             }

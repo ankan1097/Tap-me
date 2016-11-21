@@ -43,6 +43,7 @@ public class GameActivity extends AppCompatActivity {
         getquestion(ans);
         setButtntext();
 
+
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +54,8 @@ public class GameActivity extends AppCompatActivity {
                         setButtntext();
                     }                    score++;
                     scr.setText(""+score);
+                    if(score > Integer.parseInt(SaveSharedPreference.getUserName(GameActivity.this)))
+                        SaveSharedPreference.setUserName(getApplicationContext(), ""+score);
                     i=0;
                     mCountDownTimer.cancel();
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
@@ -77,6 +80,8 @@ public class GameActivity extends AppCompatActivity {
                         setButtntext();
                     }                    score++;
                     scr.setText(""+score);
+                    if(score > Integer.parseInt(SaveSharedPreference.getUserName(GameActivity.this)))
+                        SaveSharedPreference.setUserName(getApplicationContext(), ""+score);
                     i=0;
                     mCountDownTimer.cancel();
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
@@ -102,6 +107,8 @@ public class GameActivity extends AppCompatActivity {
                     }
                     score++;
                     scr.setText(""+score);
+                    if(score > Integer.parseInt(SaveSharedPreference.getUserName(GameActivity.this)))
+                        SaveSharedPreference.setUserName(getApplicationContext(), ""+score);
                     i=0;
                     mCountDownTimer.cancel();
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
@@ -142,7 +149,7 @@ public class GameActivity extends AppCompatActivity {
                 "Answer of (221/17-11)is?  and tap 1 for next","TAP 1 if You want to go to next level",
                 "TAP 1 if You want to increase score","Todays Date is?\n just tap 1 for next level"};
 
-        String[] Q2 = {"tap 2","T\nA\nP\n2" "just tap 2", "do not tap 3 tap 2", "don't tap 1 tap 2",
+        String[] Q2 = {"tap 2","T\nA\nP\n2","just tap 2", "do not tap 3 tap 2", "don't tap 1 tap 2",
                 "tap 2 to go to next one", "just tap 2 to go to next one", "do not tap 3 tap 1 to go to next one",
                 "don't tap 3 or 1 tap 2 to go to next one","What is 3-1 Tap that one","What is 1+1? Tap that one",
                 "tap 2 and wait", "just tap 2 and wait", "do not TAP3 TAP2",
@@ -208,6 +215,8 @@ public class GameActivity extends AppCompatActivity {
                     setButtntext();
                     score++;
                     scr.setText(""+score);
+                    if(score > Integer.parseInt(SaveSharedPreference.getUserName(GameActivity.this)))
+                        SaveSharedPreference.setUserName(getApplicationContext(), ""+score);
                     mCountDownTimer.cancel();
                     mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
                     mCountDownTimer.start();
