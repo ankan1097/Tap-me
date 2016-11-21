@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class GameActivity extends AppCompatActivity {
 
 
@@ -165,25 +168,46 @@ public class GameActivity extends AppCompatActivity {
                 "Answer of (371/23-12)is?\n  and tap 3 for next","TAP 3 if You want to go to next level",
                 "TAP 3 if You want to increase score","Todays Date is?\n just tap 3 for next"};
 
-        String[] Pre={"Now ","If You are alive ","If You are living ","Quick! ","Ready, ","Simon Says, ","Ahana Says, ","You must "};
+        String[] Pre={"Now ","If You are alive!\n ","If You are living ","Quick! ","Ready, ","Simon Says, ","Ahana Says, ","You must "};
+
+        Arrays.sort(Q0, new Comparator<String>() {
+            public int compare(String o1, String o2) {
+                return Integer.compare(o1.length(), o2.length());
+            }
+        });
+        Arrays.sort(Q1,new Comparator<String>(){
+            public int compare(String o1, String o2) {
+                return Integer.compare(o1.length(), o2.length());
+            }
+        });
+        Arrays.sort(Q2,new Comparator<String>(){
+            public int compare(String o1, String o2) {
+                return Integer.compare(o1.length(), o2.length());
+            }
+        });
+        Arrays.sort(Q3,new Comparator<String>(){
+            public int compare(String o1, String o2) {
+                return Integer.compare(o1.length(), o2.length());
+            }
+        });
 
         int ch;
         String qesn;
         switch (Qch) {
             case 0:
-                qesn = Q0[(int) (Math.random() * Q0.length)];
+                qesn = Q0[(int) (Math.random() * Math.min(Q0.length, 4 + score))];
                 break;
             case 1:
-                qesn = Q1[(int) (Math.random() * Q1.length)];
+                qesn = Q1[(int) (Math.random() * Math.min(Q1.length,4+score ))];
                 break;
             case 2:
-                qesn = Q2[(int) (Math.random() * Q2.length)];
+                qesn = Q2[(int) (Math.random() * Math.min(Q2.length,4+score ))];
                 break;
             default:
-                qesn = Q3[(int) (Math.random() * Q3.length)];
+                qesn = Q3[(int) (Math.random() * Math.min(Q3.length,4+score ))];
                 break;
         }
-        if( ((int)(Math.random() * 10)) <=5 && qesn.length()<=25 ){//40% chance
+        if( ((int)(Math.random() * 10)) <=4 && qesn.length()<=25 && score>8){//40% chance
             qesn=Pre[(int) (Math.random() * Pre.length)] + qesn;
         }
 
