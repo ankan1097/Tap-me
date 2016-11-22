@@ -31,7 +31,7 @@
         fancy:fb_textColor="#000000"
         fancy:fb_borderWidth="3dp"
         fancy:fb_borderColor="#FFFFFF"
-        fancy:fb_fontIconResource="&#xf04b;"
+        fancy:fb_fontIconResource="&#xf0f6;"
         fancy:fb_defaultColor="#66bb6a"
         fancy:fb_textSize="20dp"
         fancy:fb_text="Classic mode"/>
@@ -46,7 +46,7 @@
         fancy:fb_textColor="#000000"
         fancy:fb_borderWidth="3dp"
         fancy:fb_borderColor="#FFFFFF"
-        fancy:fb_fontIconResource="&#xf080;"
+        fancy:fb_fontIconResource="&#xf1fe;"
         fancy:fb_textSize="20dp"
         fancy:fb_radius="30dp"
         fancy:fb_text="Math mode"/>
