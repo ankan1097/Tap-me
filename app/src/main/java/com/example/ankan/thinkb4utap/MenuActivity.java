@@ -20,6 +20,7 @@ public class MenuActivity extends AppCompatActivity {
 
     FancyButton butt1, butt2, butt3;
     TypeWriter head;
+    static int flag;
     private static MenuActivity instance;
 
     @Override

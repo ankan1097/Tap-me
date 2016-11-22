@@ -9,9 +9,11 @@ import android.widget.TextView;
 
 import com.vstechlab.easyfonts.EasyFonts;
 
+import mehdi.sakout.fancybuttons.FancyButton;
+
 public class ModeActivity extends AppCompatActivity {
 
-    Button butt1, butt2;
+    FancyButton butt1, butt2;
     TextView txt;
 
     @Override
@@ -19,8 +21,8 @@ public class ModeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode);
 
-        butt1 = (Button)findViewById(R.id.classic);
-        butt2 = (Button)findViewById(R.id.math);
+        butt1 = (FancyButton) findViewById(R.id.classic);
+        butt2 = (FancyButton) findViewById(R.id.math);
         txt = (TextView)findViewById(R.id.mode);
         txt.setTypeface(EasyFonts.androidNation(getApplicationContext()));
 

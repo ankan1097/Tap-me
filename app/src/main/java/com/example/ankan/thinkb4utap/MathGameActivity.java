@@ -19,13 +19,15 @@ public class MathGameActivity extends AppCompatActivity {
     ProgressBar mProgressBar;
     MyCountDownTimer mCountDownTimer;
     TextView eqntext;
-    int mathscore;
+    static int mathscore,tmpscore;
     int mathans;
     int i,j;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_game);
+
+        MenuActivity.flag=2;
 
         eqntext=(TextView) findViewById(R.id.eqn_ques);
 
@@ -90,6 +92,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -127,6 +130,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -164,6 +168,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -201,6 +206,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -239,6 +245,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -277,6 +284,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -315,6 +323,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -353,6 +362,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -391,6 +401,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -428,6 +439,7 @@ public class MathGameActivity extends AppCompatActivity {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
                     GameActivity.score=mathscore;
+                    tmpscore=mathscore;
                     mathscore=0;
                     Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                     //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
@@ -502,7 +514,19 @@ public class MathGameActivity extends AppCompatActivity {
 //            Log.v("Log_tag", "Tick of Progress" + i + "   " + millisUntilFinished);
             i += 1;
             if(i>=106){
-
+                GameActivity.score=mathscore;
+                tmpscore=mathscore;
+                mathscore=0;
+                Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                //overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                try {
+                    mCountDownTimer.cancel();
+                }
+                catch (Exception e){}
+                mCountDownTimer = null;
+                startActivity(intent);
+                finish();
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
             mProgressBar.setProgress(i);
 

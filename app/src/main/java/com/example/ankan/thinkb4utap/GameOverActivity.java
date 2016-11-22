@@ -50,8 +50,14 @@ public class GameOverActivity extends Activity {
         gob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), GameActivity.class);
-                startActivity(intent);
+                if(MenuActivity.flag == 5) {
+                    Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+                    startActivity(intent);
+                }
+                else{
+                    Intent intent = new Intent(getApplicationContext(), MathGameActivity.class);
+                    startActivity(intent);
+                }
             }
 
         });
