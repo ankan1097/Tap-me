@@ -310,7 +310,7 @@ public class GameActivity extends AppCompatActivity {
         public void onTick(long millisUntilFinished) {
             Log.v("Log_tag", "Tick of Progress" + i + "   " + millisUntilFinished);
             i += 2;
-            if (i == 100) {
+            if (i >= 106) {
                 i = 0;
                 if(ans!=0){
                     qtext.setPaintFlags(qtext.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
