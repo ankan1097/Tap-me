@@ -50,6 +50,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ModeActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
             }
         });
@@ -64,6 +65,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), HiScoreActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
             }
         });
