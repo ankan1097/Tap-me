@@ -238,7 +238,7 @@ public class GameActivity extends AppCompatActivity {
                 "Tap 3 if You want to increase score","Todays Date is __?\n Just Tap 3 for Next Level",
                 "Last Digit of Current Time?\n Just Tap 3 for Next Level"};
 
-        String[] Pre={"Now   \n","If You are alive!\n ","If You are living\n","Quick !!!\n","Ready,  \n","Simon Says, \n","Ahana Says, \n"};
+        String[] Pre={"Now   \n","If You are alive!\n ","If You are living\n","Quick !!!\n","Ahana Tells,  \n","Ahana Says, \n","Ahana Says, \n"};
 
         Arrays.sort(Q0, new Comparator<String>() {
             public int compare(String o1, String o2) {
@@ -301,7 +301,7 @@ public class GameActivity extends AppCompatActivity {
                 qesn = Q3[r];
                 break;
         }
-        if( ((int)(Math.random() * 10)) <=4 && qesn.length()<=25 && score>8){//40% chance
+        if( ((int)(Math.random() * 10)) <=7 && qesn.length()<=25 && score>4){//70% chance
             qesn=Pre[(int) (Math.random() * Pre.length)] + qesn;
         }
 
