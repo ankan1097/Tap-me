@@ -1,8 +1,11 @@
 package com.example.ankan.thinkb4utap;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +29,8 @@ public class MathGameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_game);
+        GameActivity.media = MediaPlayer.create(getApplicationContext(), R.raw.timer);
+        GameActivity.media.start();
 
         MenuActivity.flag=2;
 
@@ -78,6 +83,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[0].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[0].getText().toString()) ==mathans) {
                     mathscore++;
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -91,7 +98,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
-
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
                 }
             }
         });
@@ -103,7 +111,8 @@ public class MathGameActivity extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(),tv[1].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[1].getText().toString()) ==mathans) {
                     mathscore++;
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -117,7 +126,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
-
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
                 }
             }
         });
@@ -129,7 +139,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[2].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[2].getText().toString()) ==mathans) {
                     mathscore++;
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -143,7 +154,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
-
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
                 }
             }
         });
@@ -155,7 +167,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[3].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[3].getText().toString()) ==mathans) {
                     mathscore++;
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -169,7 +182,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
-
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
                 }
             }
         });
@@ -181,7 +195,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[4].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[4].getText().toString()) ==mathans) {
                     mathscore++;
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -195,6 +210,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
 
                 }
             }
@@ -207,7 +224,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[5].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[5].getText().toString()) ==mathans) {
                     mathscore++;
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -221,6 +239,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
 
                 }
             }
@@ -233,7 +253,8 @@ public class MathGameActivity extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(),tv[6].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[6].getText().toString()) ==mathans) {
                     mathscore++;
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -247,6 +268,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
 
                 }
             }
@@ -259,7 +282,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[7].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[7].getText().toString()) ==mathans) {
                     mathscore++;
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -273,6 +297,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
 
                 }
             }
@@ -285,7 +311,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[8].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[8].getText().toString()) ==mathans) {
                     mathscore++;
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -299,6 +326,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
 
                 }
             }
@@ -311,6 +340,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[9].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[9].getText().toString()) ==mathans) {
                     mathscore++;
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     try {
                         mCountDownTimer.cancel();
                     }
@@ -324,7 +355,8 @@ public class MathGameActivity extends AppCompatActivity {
                 else {
                     i+=30;
                     Toast.makeText(getApplicationContext(),"-3 Seconds",Toast.LENGTH_LONG).show();
-
+                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vib.vibrate(200);
                 }
             }
         });
@@ -387,6 +419,8 @@ public class MathGameActivity extends AppCompatActivity {
 //            Log.v("Log_tag", "Tick of Progress" + i + "   " + millisUntilFinished);
             i += 1;
             if(i>=106){
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.wrong);
+                mp.start();
                 GameActivity.score=mathscore;
                 tmpscore=mathscore;
                 mathscore=0;

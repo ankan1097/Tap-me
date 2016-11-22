@@ -24,6 +24,7 @@ public class GameActivity extends AppCompatActivity {
 
 
     ProgressBar mProgressBar;
+    static MediaPlayer media;
     MyCountDownTimer mCountDownTimer;
     int i = 0, ans;
     TextView qtext;
@@ -47,7 +48,7 @@ public class GameActivity extends AppCompatActivity {
         scr = (TextView) findViewById(R.id.score);
         scr.setText(""+score);
 
-        MediaPlayer media = MediaPlayer.create(getApplicationContext(), R.raw.timer);
+        media = MediaPlayer.create(getApplicationContext(), R.raw.timer);
         media.setLooping(true);
         media.start();
 

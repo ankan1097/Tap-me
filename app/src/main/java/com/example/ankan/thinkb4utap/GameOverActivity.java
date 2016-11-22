@@ -23,10 +23,9 @@ public class GameOverActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        GameActivity.media.stop();
         slide_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in);
         setContentView(R.layout.activity_game_over);
-//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gali);
-//        mp.start();
         TextView tt=(TextView) findViewById(R.id.disp_score);
         tt.setText("SCORE: "+GameActivity.score+"\n");
         tt.setTypeface(EasyFonts.ostrichBold(this));

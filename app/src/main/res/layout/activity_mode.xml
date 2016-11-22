@@ -13,9 +13,11 @@
     tools:context="com.example.ankan.thinkb4utap.ModeActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:textSize="50dp"
+        android:layout_marginBottom="120dp"
+        android:layout_centerHorizontal="true"
         android:text="MODES"
         android:textColor="#FFFFFF"
         android:id="@+id/mode"/>
