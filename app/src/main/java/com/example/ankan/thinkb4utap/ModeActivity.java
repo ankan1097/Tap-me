@@ -21,8 +21,10 @@ public class ModeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode);
 
+
         butt1 = (FancyButton) findViewById(R.id.classic);
         butt2 = (FancyButton) findViewById(R.id.math);
+
         txt = (TextView)findViewById(R.id.mode);
         txt.setTypeface(EasyFonts.androidNation(getApplicationContext()));
 

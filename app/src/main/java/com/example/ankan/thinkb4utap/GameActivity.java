@@ -47,6 +47,10 @@ public class GameActivity extends AppCompatActivity {
         scr = (TextView) findViewById(R.id.score);
         scr.setText(""+score);
 
+        MediaPlayer media = MediaPlayer.create(getApplicationContext(), R.raw.timer);
+        media.setLooping(true);
+        media.start();
+
         mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
         mProgressBar.setProgress(i);
         mCountDownTimer = new MyCountDownTimer(50000, Math.max(10,40-score));
@@ -64,6 +68,8 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (Integer.parseInt(bt1.getText().toString()) == ans) {
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     ans=(int)(Math.random()*4);
                     getquestion(ans);
                     if( ((int)(Math.random() * 10)) <=4 ) {//50% chance
@@ -102,7 +108,8 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (Integer.parseInt(bt2.getText().toString()) == ans) {
-
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     ans = (int) (Math.random() * 4);
                     getquestion(ans);
                     if( ((int)(Math.random() * 10)) <=4 ) {//50% chance
@@ -143,6 +150,8 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if ( Integer.parseInt(bt3.getText().toString()) == ans ){
+                    MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
+                    mp3.start();
                     ans=(int)(Math.random()*4);
                     getquestion(ans);
                     if( ((int)(Math.random() * 10)) <=4 ) {//50% chance
