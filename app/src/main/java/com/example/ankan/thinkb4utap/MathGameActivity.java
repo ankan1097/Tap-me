@@ -31,6 +31,7 @@ public class MathGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_game);
         GameActivity.media = MediaPlayer.create(getApplicationContext(), R.raw.timer);
+        GameActivity.media.setLooping(true);
         GameActivity.media.start();
 
         sco=(TextView)findViewById(R.id.mathscore);
