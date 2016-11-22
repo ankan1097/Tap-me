@@ -19,10 +19,11 @@ import com.vstechlab.easyfonts.EasyFonts;
 public class MathGameActivity extends AppCompatActivity {
 
     TextView tv[]=new TextView[10];
+    TextView sco;
     ProgressBar mProgressBar;
     MyCountDownTimer mCountDownTimer;
     TextView eqntext;
-    static int mathscore,tmpscore;
+    static int mathscore=0,tmpscore;
     int mathans;
     int i,j;
     @Override
@@ -32,6 +33,7 @@ public class MathGameActivity extends AppCompatActivity {
         GameActivity.media = MediaPlayer.create(getApplicationContext(), R.raw.timer);
         GameActivity.media.start();
 
+        sco=(TextView)findViewById(R.id.mathscore);
         MenuActivity.flag=2;
 
         eqntext=(TextView) findViewById(R.id.eqn_ques);
@@ -73,6 +75,8 @@ public class MathGameActivity extends AppCompatActivity {
         tv[9]=(TextView) findViewById(R.id.xx9);
         tv[9].setText("9");
         tv[9].setTypeface(EasyFonts.captureIt(this));
+
+        sco.setText(""+mathscore);
         mathans=setNewEqn(mathscore);
 
         j=0;
@@ -83,6 +87,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[0].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[0].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -111,6 +117,8 @@ public class MathGameActivity extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(),tv[1].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[1].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -139,6 +147,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[2].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[2].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -167,6 +177,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[3].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[3].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -195,6 +207,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[4].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[4].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -224,6 +238,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[5].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[5].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -253,6 +269,8 @@ public class MathGameActivity extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(),tv[6].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[6].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -282,6 +300,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[7].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[7].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -311,6 +331,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[8].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[8].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -340,6 +362,8 @@ public class MathGameActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),tv[9].getText().toString(),Toast.LENGTH_LONG).show();
                 if (Integer.parseInt(tv[9].getText().toString()) ==mathans) {
                     mathscore++;
+                    sco.setText(""+mathscore);
+
                     MediaPlayer mp3 = MediaPlayer.create(getApplicationContext(), R.raw.correct);
                     mp3.start();
                     try {
@@ -361,7 +385,10 @@ public class MathGameActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed(){
 
+    }
     public int setNewEqn(int mscore){
         int a = (int)(Math.random()*100);
         int b = (int)(Math.random()*100);

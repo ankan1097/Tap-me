@@ -192,6 +192,10 @@ public class GameActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed(){
+    }
+
     public void setButtntext() {
         String[] t = {"1", "2", "3"};
         int s = (int) (Math.random() * 3);//0 1 2

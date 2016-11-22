@@ -10,12 +10,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ankan.thinkb4utap.MathGameActivity">
-
-    <ProgressBar
-        android:id="@+id/progressbar"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:id="@+id/mathscore"
+        />
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_below="@+id/mathscore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:max="100"
         android:progress="100"
         style="?android:attr/progressBarStyleHorizontal" />
